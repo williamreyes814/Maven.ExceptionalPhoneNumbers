@@ -49,7 +49,7 @@ public final class PhoneNumberFactory {
      */ //TODO - if input is valid, return respective PhoneNumber object, else return null
     public static PhoneNumber createPhoneNumberSafely(int areaCode, int centralOfficeCode, int phoneLineCode) {
         try { // if(there is an InvalidPhoneNumberFormatException )
-            String phoneNumberString = "" + areaCode + centralOfficeCode + phoneLineCode;
+            String phoneNumberString = "(" + areaCode + ")-" + centralOfficeCode + "-" + phoneLineCode;
             return createPhoneNumber(phoneNumberString);
         } catch (InvalidPhoneNumberFormatException e) { //then try to handle it by
             e.printStackTrace();
